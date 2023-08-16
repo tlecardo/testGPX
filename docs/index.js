@@ -7,13 +7,17 @@ async function renderMap() {
     "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   ).addTo(map);
 
-  const gpxString = await fetch("demo.gpx").then((res) =>
+  const gpxString = await fetch("https://raw.githubusercontent.com/tlecardo/testGPX/main/MTL_NYC.gpx").then((res) =>
     res.text()
   );
-  // Guck hier Papa, bzw rechts in die Console
-  console.log(gpxString.slice(0, 50));
+  
   new L.GPX(gpxString, {
-    async: true
+    async: true,
+    marker_options: {
+      startIconUrl: '',
+      endIconUrl: '',
+      shadowUrl: ''
+    }
   })
     .on("loaded", (e) => {
       var gpx = e.target;
