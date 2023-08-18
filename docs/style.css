@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+}
+
+.map {
+    width: 100vw;
+    height: 100vh;
+}
+  
+.track, .city {
+    text-align: center;
+}
+
+.title {
+    font-size: large;
+    font-weight: bolder;
+}
+
+.info {
+    font-size: medium;
+}
