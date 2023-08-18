@@ -29,21 +29,22 @@ async function renderMap() {
         fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${name}.gpx`)
           .then(res => res.text())
           .then(res => {
+            /*
             console.log(res.match(/time = [0-9]*h [0-9]*m/))
-            let dist = res.match(/track-length = [0-9]* filtered/)[0]
-              .replace("track-length = ", "")
-              .replace(" filtered", "")
-              
             let time = res.match(/time = [0-9]*h [0-9]*m/)[0]
               .replace("time = ", "")
               .replace(" -->", "")
+            */
+            let dist = res.match(/track-length = [0-9]* filtered/)[0]
+              .replace("track-length = ", "")
+              .replace(" filtered", "")
             dist = Math.round(dist/100)/10
             dist = parseInt( dist ).toLocaleString()
             
             new L.GPX(res, {
               async: true,
               marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' }
-            }).bindTooltip(`<div class="track title">${name.replaceAll("_", " ")}</div><div class="track info">${dist} kms</div><div class="track info">${time} kms</div>`).addTo(map);
+            }).bindTooltip(`<div class="track title">${name.replaceAll("_", " ")}</div><div class="track info">${dist} kms</div><div class="track info">${"??h ??m"}</div>`).addTo(map);
           })
       }
     )
