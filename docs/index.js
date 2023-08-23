@@ -1,6 +1,3 @@
-import { LatLng, LatLngBounds } from "leaflet";
-import * as L from "leaflet-gpx";
-
 async function renderMap() {
   const map = L.map(document.querySelector(".map"));
 
@@ -18,7 +15,7 @@ async function renderMap() {
   L.marker([40.750262, -73.992824]).bindTooltip(`<div class="city title">New York</div>`, { direction: 'right' }).addTo(map);
   L.marker([45.500295, -73.567149]).bindTooltip(`<div class="city title">Montréal</div>`, { direction: 'right' }).addTo(map);
 
-  map.fitBounds(new LatLngBounds(new LatLng(32, -122.292293), new LatLng(45.500295, -73.567149)));
+  map.fitBounds(new L.LatLngBounds(new L.LatLng(32, -122.292293), new L.LatLng(45.500295, -73.567149)));
 
   let tracks = {}
   let namesTracks = ['Lake_Shore_Limited', 'Empire_Builder', 'California_Zephyr', 'Texas_Eagle',
