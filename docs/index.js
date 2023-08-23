@@ -9,7 +9,7 @@ async function renderMap() {
   ).addTo(map);
 
   L.marker([42.641298, -73.741554]).bindTooltip(`<div class="city title">Albany</div>`, { direction: 'right' }).addTo(map);
-  L.marker([41.875152, -87.632273]).bindTooltip(`<div class="city title">Chicago</div>`, { direction: 'right' }).addTo(map);
+  L.marker([41.878773, -87.638622]).bindTooltip(`<div class="city title">Chicago</div>`, { direction: 'right' }).addTo(map);
   L.marker([47.597811, -122.329564]).bindTooltip(`<div class="city title">Seattle</div>`, { direction: 'right' }).addTo(map);
   L.marker([37.840341, -122.292293]).bindTooltip(`<div class="city title">San Francisco</div>`, { direction: 'right' }).addTo(map);
   L.marker([40.944502, -90.363511]).bindTooltip(`<div class="city title">Galesburg</div>`, { direction: 'right' }).addTo(map);
