@@ -5,22 +5,22 @@
     "description": "JavaScript example starter project",
     "main": "docs/index.html",
     "scripts": {
-      "start": "parcel docs/index.html --open",
-      "build": "parcel build docs/index.html"
+        "start": "parcel docs/index.html --open",
+        "build": "parcel build docs/index.html"
     },
     "dependencies": {
-      "leaflet": "1.7.1",
-      "leaflet-gpx": "1.7.0",
-      "parcel-bundler": "^1.6.1"
+        "leaflet": "1.7.1",
+        "leaflet-gpx": "1.7.0",
+        "parcel-bundler": "^1.6.1"
     },
     "devDependencies": {
-      "@babel/core": "7.2.0"
+        "@babel/core": "7.2.0"
     },
     "resolutions": {
-      "@babel/preset-env": "7.13.8"
+        "@babel/preset-env": "7.13.8"
     },
     "keywords": [
-      "javascript",
-      "starter"
+        "javascript",
+        "starter"
     ]
-  }
+}
