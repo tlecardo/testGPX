@@ -4,7 +4,7 @@
     "type": "module",
     "name": "vanilla",
     "version": "1.0.0",
-    "description": "JavaScript example starter project",
+    "description": "USTrain",
     "main": "docs/index.html",
     "scripts": {
         "start": "lite-server ."

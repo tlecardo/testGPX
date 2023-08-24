@@ -5,16 +5,7 @@ async function renderMap() {
     "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   ).addTo(map);
 
-  var greenIcon = L.icon({
-    iconUrl: 'https://cdn3.iconfinder.com/data/icons/basicolor-signs-warnings/24/186_fire-512.png',
-    iconSize: [35, 35], // size of the icon
-    shadowSize: [50, 64], // size of the shadow
-    iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-    shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
-});
-
-  L.marker([42.641298, -73.741554], greenIcon).bindTooltip(`<div class="city title">Albany</div>`).addTo(map);
+  L.marker([42.641298, -73.741554]).bindTooltip(`<div class="city title">Albany</div>`).addTo(map);
   L.marker([41.878773, -87.638622]).bindTooltip(`<div class="city title">Chicago</div>`).addTo(map);
   L.marker([47.597811, -122.329564]).bindTooltip(`<div class="city title">Seattle</div>`).addTo(map);
   L.marker([37.840341, -122.292293]).bindTooltip(`<div class="city title">San Francisco</div>`).addTo(map);
