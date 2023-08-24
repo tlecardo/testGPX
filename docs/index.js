@@ -23,7 +23,7 @@ async function renderMap() {
     'Sunset_Limited', 'Adirondack', 'Crescent', 'Coast_Starlight']
 
   for await (let name of namesTracks) {
-    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${name}.gpx`)
+    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.gpx`)
       .then(res => res.text())
       .then(res => {
 
