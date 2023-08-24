@@ -5,16 +5,7 @@ async function renderMap() {
     "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   ).addTo(map);
 
-  var greenIcon = L.icon({
-    iconUrl: 'https://cdn3.iconfinder.com/data/icons/basicolor-signs-warnings/24/186_fire-512.png',
-    iconSize: [35, 35], // size of the icon
-    shadowSize: [50, 64], // size of the shadow
-    iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-    shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
-});
-
-  L.marker([42.641298, -73.741554], greenIcon).bindTooltip(`<div class="city title">Albany</div>`).addTo(map);
+  L.marker([42.641298, -73.741554]).bindTooltip(`<div class="city title">Albany</div>`).addTo(map);
   L.marker([41.878773, -87.638622]).bindTooltip(`<div class="city title">Chicago</div>`).addTo(map);
   L.marker([47.597811, -122.329564]).bindTooltip(`<div class="city title">Seattle</div>`).addTo(map);
   L.marker([37.840341, -122.292293]).bindTooltip(`<div class="city title">San Francisco</div>`).addTo(map);
@@ -28,11 +19,11 @@ async function renderMap() {
   map.fitBounds(new L.LatLngBounds(new L.LatLng(32, -122.292293), new L.LatLng(45.500295, -73.567149)));
 
   let tracks = {}
-  let namesTracks = ['Lake_Shore_Limited', 'Empire_Builder', 'California_Zephyr', 'Texas_Eagle',
+  let namesTracks = ['Lake_Shore_Limited', 'Empire_Builder', 'California_Zephyr', 'Southwest_Chief',
     'Sunset_Limited', 'Adirondack', 'Crescent', 'Coast_Starlight']
 
   for await (let name of namesTracks) {
-    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${name}.gpx`)
+    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.gpx`)
       .then(res => res.text())
       .then(res => {
 
@@ -48,7 +39,18 @@ async function renderMap() {
 
         tracks[name] = res.match(/<trkpt lat="[\-0-9.]*" lon="[\-0-9.]*">/gm).map(x => x.match(/[\-0-9]+.[0-9]+/gm))
 
-        new L.GPX(res, {
+        new L.GPX(res, 
+          {
+          /*polyline_options: [{
+            color: 'green',
+            opacity: 0.75,
+            weight: 3,
+            lineCap: 'round'
+          },{
+            color: 'blue',
+            opacity: 0.75,
+            weight: 1
+          }],*/
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' }
         }).bindTooltip(
