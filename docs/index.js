@@ -49,6 +49,18 @@ async function renderMap() {
       })
   }
 
+  let histTracks = ['BE', 'UK', 'FR']
+  for await (let name of histTracks) {
+    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${name}.gpx`)
+      .then(res => res.text())
+      .then(res => {
+        new L.GPX(res, {
+          async: true,
+          marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' }
+        }).addTo(map);
+      })
+  }
+
   /*
   let localPts = tracks["Empire_Builder"]
   let i = 20
