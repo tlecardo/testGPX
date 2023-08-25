@@ -56,7 +56,8 @@ async function renderMap() {
       .then(res => {
         new L.GPX(res, {
           async: true,
-          marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' }
+          marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+          gpx_options: { joinTrackSegments: false }
         }).addTo(map);
       })
   }
