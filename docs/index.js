@@ -42,7 +42,7 @@ async function renderMap() {
         new L.GPX(res, {
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-          polyline_options: {color: "green"}
+          polyline_options: {color: "blue"}
         }).bindTooltip(
           `<div class="track title">${name.replaceAll("_", " ")}</div><div class="track info">${dist} kms</div><div class="track info">${time}</div>`,
           { sticky: true, }
@@ -58,7 +58,8 @@ async function renderMap() {
         new L.GPX(res, {
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-          gpx_options: { joinTrackSegments: false }
+          gpx_options: { joinTrackSegments: false },
+          polyline_options: {color: "grey"}
         }).addTo(map);
       })
   }
