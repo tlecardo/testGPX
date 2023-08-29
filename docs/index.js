@@ -59,7 +59,7 @@ async function renderMap() {
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
           gpx_options: { joinTrackSegments: false },
-          polyline_options: {color: "blue", weight:	1, fillOpacity:	0.4}, 
+          polyline_options: {color: "blue", fillOpacity:	0.4}, 
         }).addTo(map);
       })
   }
