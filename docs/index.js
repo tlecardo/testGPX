@@ -64,7 +64,7 @@ async function renderMap() {
       })
   }
 
-  let projectTracks = ['1', '3', '3']
+  let projectTracks = ['1', '2', '3']
   for await (let name of projectTracks) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Projected/${name}.gpx`)
       .then(res => res.text())
