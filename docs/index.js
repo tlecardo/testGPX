@@ -42,7 +42,7 @@ async function renderMap() {
         new L.GPX(res, {
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-          polyline_options: {color: "blue"}
+          polyline_options: {color: "green"}
         }).bindTooltip(
           `<div class="track title">${name.replaceAll("_", " ")}</div><div class="track info">${dist} kms</div><div class="track info">${time}</div>`,
           { sticky: true, }
@@ -53,6 +53,20 @@ async function renderMap() {
   let histTracks = ['BE', 'UK', 'FR', 'CA']
   for await (let name of histTracks) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${name}.gpx`)
+      .then(res => res.text())
+      .then(res => {
+        new L.GPX(res, {
+          async: true,
+          marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+          gpx_options: { joinTrackSegments: false },
+          polyline_options: {color: "blue", fillOpacity:	0.4}, 
+        }).addTo(map);
+      })
+  }
+
+  let projectTracks = ['1', '3', '3']
+  for await (let name of projectTracks) {
+    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Projected/${name}.gpx`)
       .then(res => res.text())
       .then(res => {
         new L.GPX(res, {
