@@ -1,9 +1,8 @@
 async function renderMap() {
   const map = L.map(document.querySelector(".map"));
 
-  L.tileLayer(
-    "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-  ).addTo(map);
+  L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+  L.control.scale().addTo(map);
 
   L.marker([42.641298, -73.741554]).bindTooltip(`<div class="city title">Albany</div>`).addTo(map);
   L.marker([41.878773, -87.638622]).bindTooltip(`<div class="city title">Chicago</div>`).addTo(map);
