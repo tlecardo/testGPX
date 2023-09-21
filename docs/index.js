@@ -63,39 +63,19 @@ async function renderMap() {
       })
   }
 
-
-  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Projected/Project.gpx`)
-    .then(res => res.text())
-    .then(res => {
-      new L.GPX(res, {
-        async: true,
-        marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-        gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "green", fillOpacity: 0.4 },
-      }).addTo(map);
-    })
-
-  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Projected/Vancouver.gpx`)
-    .then(res => res.text())
-    .then(res => {
-      new L.GPX(res, {
-        async: true,
-        marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-        gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "green", fillOpacity: 0.4 },
-      }).addTo(map);
-    })
-
-  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Projected/Miami.gpx`)
-    .then(res => res.text())
-    .then(res => {
-      new L.GPX(res, {
-        async: true,
-        marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-        gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "green", fillOpacity: 0.4 },
-      }).addTo(map);
-    })
+  let projTracks = ['Exo_1', 'Exo_2', 'Miami', 'Vancouver', 'Project']
+  for await (let name of projTracks) {
+    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${name}.gpx`)
+      .then(res => res.text())
+      .then(res => {
+        new L.GPX(res, {
+          async: true,
+          marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+          gpx_options: { joinTrackSegments: false },
+          polyline_options: { color: "green", fillOpacity: 0.4 },
+        }).addTo(map);
+      })
+  }
 
   /*
   let localPts = tracks["Empire_Builder"]
