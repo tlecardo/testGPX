@@ -36,7 +36,7 @@ async function renderMap() {
         dist = Math.round(dist / 100) / 10
         dist = parseInt(dist).toLocaleString()
 
-        tracks[name] = res.match(/<trkpt lat="[\-0-9.]*" lon="[\-0-9.]*">/gm).map(x => x.match(/[\-0-9]+.[0-9]+/gm))
+        //tracks[name] = res.match(/<trkpt lat="[\-0-9.]*" lon="[\-0-9.]*">/gm).map(x => x.match(/[\-0-9]+.[0-9]+/gm))
 
         new L.GPX(res, {
           async: true,
