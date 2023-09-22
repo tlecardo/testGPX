@@ -77,6 +77,17 @@ async function renderMap() {
       })
   }
 
+  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Ferry.gpx`)
+    .then(res => res.text())
+    .then(res => {
+      new L.GPX(res, {
+        async: true,
+        marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+        gpx_options: { joinTrackSegments: false },
+        polyline_options: { color: "red", fillOpacity: 0.4 },
+      }).addTo(map);
+    })
+
   /*
   let localPts = tracks["Empire_Builder"]
   let i = 20

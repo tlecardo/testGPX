@@ -8,9 +8,6 @@
  creator="BRouter-Web 99.61.0">
  <trk>
   <name>20 (14 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=12/50.5726/5.6909/standard&amp;lonlats=5.572819,50.529705;5.593749,50.614049;5.581004,50.616789&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="50.529704" lon="5.572804"><ele>96.75</ele></trkpt>
    <trkpt lat="50.530486" lon="5.572809"><ele>94.5</ele></trkpt>
@@ -319,9 +316,6 @@
   </trkseg>
  
   <name>11 (55,8 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=11/50.8321/4.2870/standard&amp;lonlats=4.373648,50.838593;4.374387,50.835503;4.378493,50.830931;4.475676,50.756805;4.834713,50.477632;4.855969,50.469211;4.859493,50.468927;4.872018,50.468706&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="50.838591" lon="4.373652"><ele>74</ele></trkpt>
    <trkpt lat="50.838232" lon="4.373468"><ele>74</ele></trkpt>
@@ -728,9 +722,6 @@
   </trkseg>
  
   <name>1 (133,6 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=12/50.7165/5.0774/standard&amp;lonlats=5.566661,50.624306;5.563714,50.627531;5.506702,50.661328;5.448908,50.659038;5.242611,50.706221;4.761239,50.838071;4.717304,50.877762;4.503925,50.88288;4.485623,50.894378;4.476573,51.133878;4.439225,51.191154;4.427667,51.204287;4.423792,51.20859;4.42106,51.216457;4.421332,51.220614;4.424556,51.24503&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="50.624305" lon="5.566659"><ele>71.25</ele></trkpt>
    <trkpt lat="50.624379" lon="5.566564"><ele>71.25</ele></trkpt>
@@ -1805,9 +1796,6 @@
   </trkseg>
  
   <name>2 (31,5 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=11/50.6315/5.6442/standard&amp;lonlats=5.566661,50.624304;5.585179,50.61779;5.597287,50.6399;5.692205,50.738688;5.705407,50.850646&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="50.624304" lon="5.566661"><ele>71.25</ele></trkpt>
    <trkpt lat="50.623696" lon="5.567449"><ele>72</ele></trkpt>
@@ -2238,9 +2226,6 @@
   </trkseg>
  
   <name>3 (46,5 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=13/50.7470/5.7764/standard&amp;lonlats=5.692744,50.736329;5.69263,50.737328;5.694148,50.746407;5.71456,50.742479;5.72316,50.741598;5.956908,50.719483;5.976614,50.659493;6.075759,50.753828;6.09209,50.76774&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="50.73633" lon="5.692756"><ele>58.75</ele></trkpt>
    <trkpt lat="50.735855" lon="5.692891"><ele>59.25</ele></trkpt>
@@ -2795,9 +2780,6 @@
   </trkseg>
  
   <name>4 (315,7 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=12/50.6401/5.5107/standard&amp;lonlats=5.571009,50.621031;5.462038,50.597317;5.45298,50.593695;5.432529,50.588975;5.400339,50.582075;5.363375,50.566627;5.241114,50.531242;5.233936,50.527449;5.221109,50.52764;5.207528,50.52926;5.085792,50.497286;4.943539,50.480738;4.789676,50.447347;4.674863,50.452625;4.64883,50.445721;4.611726,50.434069;4.588129,50.429309;3.960268,50.472855;3.567136,50.518654;3.225725,50.738553;3.247895,50.816724;3.516282,50.824591;3.804565,50.856312;4.118937,50.878716;4.273668,50.818474;4.291892,50.817815;4.333403,50.833004;4.336435,50.835587;4.357504,50.846146;4.361913,50.855812;4.361317,50.859649;4.503918,50.882886&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="50.621031" lon="5.571009"><ele>74.5</ele></trkpt>
    <trkpt lat="50.621048" lon="5.570988"><ele>74.75</ele></trkpt>
@@ -6533,9 +6515,6 @@
   </trkseg>
  
   <name>5 (11,1 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=16/50.6037/5.4961/standard&amp;lonlats=5.458564,50.595642;5.463316,50.597124;5.475878,50.597647;5.51357,50.608856;5.55862,50.60496;5.580657,50.611064;5.584236,50.61521;5.572329,50.620021&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="50.595641" lon="5.458563"><ele>72.25</ele></trkpt>
    <trkpt lat="50.595738" lon="5.458763"><ele>72.25</ele></trkpt>
@@ -6745,9 +6724,6 @@
   </trkseg>
  
   <name>6 (96,5 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=12/51.1861/3.0367/standard&amp;lonlats=4.125795,50.875656;3.708916,51.035282;3.227494,51.178596;2.988805,51.20869;2.954689,51.214702;2.926192,51.228714&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="50.875658" lon="4.125797"><ele>22.5</ele></trkpt>
    <trkpt lat="50.875872" lon="4.125319"><ele>22.25</ele></trkpt>
@@ -7265,9 +7241,6 @@
   </trkseg>
  
   <name>7 (64,1 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=8/50.967/5.028/standard&amp;lonlats=5.518643,50.659682;5.427858,50.661012;5.195163,50.711671;5.080303,50.747613;4.954408,50.79183;4.923607,50.809264;4.807862,50.844336;4.72961,50.860708;4.723158,50.865624;4.719149,50.870052;4.718054,50.874617&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="50.659677" lon="5.51864"><ele>183.75</ele></trkpt>
    <trkpt lat="50.659763" lon="5.518275"><ele>183.25</ele></trkpt>
@@ -7902,9 +7875,6 @@
   </trkseg>
  
   <name>8 (8,5 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=13/50.8531/4.3223/standard&amp;lonlats=4.334512,50.834005;4.324201,50.83064;4.334628,50.866439;4.347043,50.878789;4.326483,50.88072&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="50.834003" lon="4.334515"><ele>25.75</ele></trkpt>
    <trkpt lat="50.833977" lon="4.334493"><ele>25.75</ele></trkpt>
@@ -8065,9 +8035,6 @@
   </trkseg>
  
   <name>9 (5,3 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=13/50.8373/4.3742/standard&amp;lonlats=4.365086,50.868262;4.381696,50.849379;4.381099,50.843499;4.374913,50.840938;4.373658,50.838584&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="50.86826" lon="4.365089"><ele>18</ele></trkpt>
    <trkpt lat="50.868334" lon="4.365134"><ele>18</ele></trkpt>
@@ -8226,9 +8193,6 @@
   </trkseg>
  
   <name>10 (5,5 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=11/50.8325/4.3757/standard&amp;lonlats=4.373644,50.838589;4.377222,50.842193;4.394767,50.847476;4.396297,50.862609;4.409798,50.877596&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="50.838586" lon="4.37365"><ele>66.25</ele></trkpt>
    <trkpt lat="50.839245" lon="4.373988"><ele>66.25</ele></trkpt>
@@ -8320,9 +8284,6 @@
   </trkseg>
  
   <name>Tournai -&gt; Saint-Gilles (81,1 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=9/50.7782/3.9935/standard&amp;lonlats=3.38955,50.614902;3.395249,50.613565;3.412314,50.610541;3.778121,50.627046;4.040074,50.699083;4.043573,50.69837;4.04699,50.697339;4.237903,50.731721;4.244893,50.73809;4.249089,50.742425;4.314337,50.815805;4.315611,50.817723;4.318238,50.820726;4.319955,50.822291;4.330745,50.8309&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="50.614897" lon="3.389546"><ele>19.5</ele></trkpt>
    <trkpt lat="50.614784" lon="3.389977"><ele>20.25</ele></trkpt>

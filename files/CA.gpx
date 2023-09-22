@@ -8,9 +8,6 @@
  creator="BRouter-Web 99.61.0">
  <trk>
   <name>Montréal -&gt; Saint-Jérôme (62,2 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=14/45.5543/-73.7112/standard&amp;lonlats=-73.569698,45.495366;-73.60347,45.473531;-73.641321,45.454006;-73.655837,45.454519;-73.656065,45.466687;-73.656049,45.485512;-73.635776,45.509297;-73.619428,45.52482;-73.664716,45.538259;-73.718412,45.577379;-73.758209,45.619513;-73.814083,45.636735;-73.820924,45.63651;-73.865015,45.671742;-73.872203,45.676933;-73.999196,45.77349&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="45.495365" lon="-73.569699"><ele>40</ele></trkpt>
    <trkpt lat="45.493962" lon="-73.571599"><ele>30</ele></trkpt>
@@ -592,9 +589,6 @@
   </trkseg>
  
   <name>Montréal -&gt; L&amp;#39;Île-Perrot (34,3 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=11/45.4679/-73.7390/standard&amp;lonlats=-73.569698,45.495366;-73.60347,45.473531;-73.641888,45.453621;-73.653862,45.451319;-73.677396,45.451982;-73.699023,45.449195;-73.711219,45.448687;-73.753229,45.449416;-73.822904,45.441626;-73.904617,45.423868;-73.965156,45.396153;-73.965428,45.395921&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="45.495365" lon="-73.569699"><ele>40</ele></trkpt>
    <trkpt lat="45.493962" lon="-73.571599"><ele>30</ele></trkpt>
@@ -875,9 +869,6 @@
   </trkseg>
  
   <name>Montréal -&gt; Brossard (16,1 km)</name>
-  <link href="https://brouter.damsy.net/latest/#map=15/45.4375/-73.4126/standard&amp;lonlats=-73.567234,45.500052;-73.555574,45.485935;-73.428185,45.438863;-73.430999,45.437959&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="45.500051" lon="-73.567235"><ele>33.5</ele></trkpt>
    <trkpt lat="45.499834" lon="-73.566775"><ele>33.5</ele></trkpt>
