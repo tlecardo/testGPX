@@ -17,7 +17,18 @@ async function renderMap() {
 
   map.fitBounds(new L.LatLngBounds(new L.LatLng(32, -122.292293), new L.LatLng(45.500295, -73.567149)));
 
-  let tracks = {}
+  var legend = L.control({ position: "bottomleft" });
+
+  legend.onAdd = function (map) {
+    var div = L.DomUtil.create("div", "legend");
+    div.innerHTML += "<h4>Tegnforklaring</h4>";
+    div.innerHTML += '<i style="background: blue"></i><span>Train</span><br>';
+    div.innerHTML += '<i style="background: green"></i><span>Futur Train</span><br>';
+    div.innerHTML += '<i style="background: red"></i><span>Ferry</span><br>';
+    //div.innerHTML += '<i class="icon" style="background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/194515-200.png);background-repeat: no-repeat;"></i><span>Grænse</span><br>';
+    return div;
+  };
+
   let namesTracks = ['Lake_Shore_Limited', 'Empire_Builder', 'California_Zephyr', 'Southwest_Chief',
     'Sunset_Limited', 'Adirondack', 'Crescent', 'Coast_Starlight']
 
@@ -35,8 +46,6 @@ async function renderMap() {
 
         dist = Math.round(dist / 100) / 10
         dist = parseInt(dist).toLocaleString()
-
-        //tracks[name] = res.match(/<trkpt lat="[\-0-9.]*" lon="[\-0-9.]*">/gm).map(x => x.match(/[\-0-9]+.[0-9]+/gm))
 
         new L.GPX(res, {
           async: true,
