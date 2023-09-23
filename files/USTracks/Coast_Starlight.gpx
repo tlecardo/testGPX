@@ -3,14 +3,9 @@
 <gpx 
  xmlns="http://www.topografix.com/GPX/1/1" 
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
- xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" 
- version="1.1" 
- creator="BRouter-Web 99.61.0">
+ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  <trk>
-  <name>Seattle_LA</name>
-  <link href="https://brouter.damsy.net/latest/#map=5/39.078/-123.750/cyclosm&amp;lonlats=-122.329609,47.597813;-122.292295,37.840428;-118.234284,34.055871&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
+  <name>Coast Starlight</name>
   <trkseg>
    <trkpt lat="47.597811" lon="-122.329564"/>
    <trkpt lat="47.597519" lon="-122.329569"/>

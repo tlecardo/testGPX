@@ -3,14 +3,9 @@
 <gpx 
  xmlns="http://www.topografix.com/GPX/1/1" 
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
- xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" 
- version="1.1" 
- creator="BRouter-Web 99.61.0">
+ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  <trk>
   <name>Crescent</name>
-  <link href="https://brouter.damsy.net/latest/#map=17/40.75026/-73.99413/standard&amp;lonlats=-90.078916,29.946285;-86.791477,33.519424;-84.392637,33.799356;-83.331792,34.578389;-80.822511,35.240984;-77.003203,38.905733;-76.615391,39.307696;-75.551047,39.736797;-75.18189,39.955927;-74.163187,40.734707;-73.992823,40.750264&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
   <trkseg>
    <trkpt lat="29.946279" lon="-90.078921"/>
    <trkpt lat="29.948355" lon="-90.082633"/>

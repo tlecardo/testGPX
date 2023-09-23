@@ -3,14 +3,9 @@
 <gpx 
  xmlns="http://www.topografix.com/GPX/1/1" 
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
- xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" 
- version="1.1" 
- creator="BRouter-Web 99.61.0">
+ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  <trk>
-  <name>MTL_NYC</name>
-  <link href="https://brouter.damsy.net/latest/#map=11/40.7901/-73.9449/cyclosm&amp;lonlats=-73.992748,40.750251;-73.567157,45.500287&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
+  <name>Adirondack</name>
   <trkseg>
    <trkpt lat="40.750235" lon="-73.99276"/>
    <trkpt lat="40.750304" lon="-73.992922"/>

@@ -3,14 +3,9 @@
 <gpx 
  xmlns="http://www.topografix.com/GPX/1/1" 
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
- xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" 
- version="1.1" 
- creator="BRouter-Web 99.61.0">
+ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  <trk>
-  <name>Sunset_Limited</name>
-  <link href="https://brouter.damsy.net/latest/#map=5/34.656/-106.699/cyclosm&amp;lonlats=-90.078363,29.946159;-98.477969,29.419376;-103.661156,30.357162;-114.615469,32.722887;-118.234262,34.055864&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
+  <name>Sunset Limited</name>
   <trkseg>
    <trkpt lat="29.946275" lon="-90.078913"/>
    <trkpt lat="29.948355" lon="-90.082633"/>

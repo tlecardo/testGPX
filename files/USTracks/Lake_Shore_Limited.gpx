@@ -3,14 +3,9 @@
 <gpx 
  xmlns="http://www.topografix.com/GPX/1/1" 
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
- xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" 
- version="1.1" 
- creator="BRouter-Web 99.61.0">
+ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  <trk>
-  <name>Lake_Shore_Limited</name>
-  <link href="https://brouter.damsy.net/latest/#map=13/41.8789/-87.6580/cyclosm&amp;lonlats=-73.992791,40.750249;-73.741307,42.641252;-76.169393,43.076818;-77.608452,43.163397;-78.848673,42.859777;-81.696213,41.505298;-82.096539,41.370146;-82.718554,41.440577;-83.54167,41.638144;-84.55194,41.480288;-85.971751,41.680667;-86.287651,41.677975;-87.639077,41.878639&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
+  <name>Lake Shore Limited</name>
   <trkseg>
    <trkpt lat="40.750249" lon="-73.992792"/>
    <trkpt lat="40.750304" lon="-73.992922"/>

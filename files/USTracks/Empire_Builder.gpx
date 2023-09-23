@@ -3,14 +3,9 @@
 <gpx 
  xmlns="http://www.topografix.com/GPX/1/1" 
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
- xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" 
- version="1.1" 
- creator="BRouter-Web 99.61.0">
+ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  <trk>
-  <name>Empire_Builder</name>
-  <link href="https://brouter.damsy.net/latest/#map=5/49.002/-111.841/standard&amp;lonlats=-87.639093,41.87864;-87.917018,43.03436;-92.537069,44.566255;-93.084669,44.946634;-96.785141,46.881198;-97.110858,47.917423;-98.861504,48.11019;-109.678316,48.554804;-119.549194,47.320827;-122.329561,47.597806&amp;profile=rail">
-   <text>BRouter-Web</text>
-  </link>
+  <name>Empire Builder</name>
   <trkseg>
    <trkpt lat="41.879066" lon="-87.639071"/>
    <trkpt lat="41.87907" lon="-87.639071"/>
