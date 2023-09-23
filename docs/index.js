@@ -29,6 +29,8 @@ async function renderMap() {
     return div;
   };
 
+  legend.addTo(map);
+
   let namesTracks = ['Lake_Shore_Limited', 'Empire_Builder', 'California_Zephyr', 'Southwest_Chief',
     'Sunset_Limited', 'Adirondack', 'Crescent', 'Coast_Starlight']
 
