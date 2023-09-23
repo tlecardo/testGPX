@@ -21,7 +21,7 @@ async function renderMap() {
 
   legend.onAdd = function (map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h4>Tegnforklaring</h4>";
+    div.innerHTML += "<h4>Légende</h4>";
     div.innerHTML += '<i style="background: blue"></i><span>Train</span><br>';
     div.innerHTML += '<i style="background: green"></i><span>Futur Train</span><br>';
     div.innerHTML += '<i style="background: red"></i><span>Ferry</span><br>';
@@ -33,7 +33,7 @@ async function renderMap() {
 
   let namesTracks = ['Lake_Shore_Limited', 'Empire_Builder', 'California_Zephyr', 'Southwest_Chief',
     'Sunset_Limited', 'Adirondack', 'Crescent', 'Coast_Starlight']
-
+  
   for await (let name of namesTracks) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.gpx`)
       .then(res => res.text())
@@ -52,7 +52,7 @@ async function renderMap() {
         new L.GPX(res, {
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-          polyline_options: { color: "green" }
+          polyline_options: { color: "blue", opacity: 0.5, dashArray:"10 10"},
         }).bindTooltip(
           `<div class="track title">${name.replaceAll("_", " ")}</div><div class="track info">${dist} kms</div><div class="track info">${time}</div>`,
           { sticky: true, }
@@ -69,7 +69,7 @@ async function renderMap() {
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
           gpx_options: { joinTrackSegments: false },
-          polyline_options: { color: "blue", fillOpacity: 0.4 },
+          polyline_options: { color: "blue", opacity: 0.7 },
         }).addTo(map);
       })
   }
@@ -83,7 +83,7 @@ async function renderMap() {
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
           gpx_options: { joinTrackSegments: false },
-          polyline_options: { color: "green", fillOpacity: 0.4 },
+          polyline_options: { color: "blue", opacity: 0.5, dashArray:"10 10"},
         }).addTo(map);
       })
   }
@@ -95,7 +95,7 @@ async function renderMap() {
         async: true,
         marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
         gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "red", fillOpacity: 0.4 },
+        polyline_options: { color: "red", opacity: 0.5},
       }).addTo(map);
     })
 
