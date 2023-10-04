@@ -1234,7 +1234,7 @@
    <trkpt lat="45.77349" lon="-73.999195"/>
   </trkseg>
  
-  <name>Montréal -&gt; L&amp;#39;Île-Perrot (34,3 km)</name>
+  <name>Montréal - Vaudreuil</name>
   <trkseg>
    <trkpt lat="45.495365" lon="-73.569699"/>
    <trkpt lat="45.493962" lon="-73.571599"/>
@@ -1514,7 +1514,7 @@
    <trkpt lat="45.395922" lon="-73.965432"/>
   </trkseg>
  
-  <name>Montréal -&gt; Brossard (16,1 km)</name>
+  <name>Montréal - Brossard</name>
   <trkseg>
    <trkpt lat="45.500051" lon="-73.567235"/>
    <trkpt lat="45.499834" lon="-73.566775"/>
