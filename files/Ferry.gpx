@@ -127,6 +127,17 @@
    <trkpt lat="40.700471" lon="-74.013005"/>
   </trkseg>
 
+  <name>Tadoussac</name>
+  <trkseg>
+   <trkpt lat="48.126526" lon="-69.729707"/>
+   <trkpt lat="48.128156" lon="-69.731349"/>
+   <trkpt lat="48.128989" lon="-69.731839"/>
+   <trkpt lat="48.12955" lon="-69.731857"/>
+   <trkpt lat="48.136675" lon="-69.726887"/>
+   <trkpt lat="48.137459" lon="-69.727006"/>
+   <trkpt lat="48.138311" lon="-69.727214"/>
+   <trkpt lat="48.139342" lon="-69.726612"/>
+  </trkseg>
 
 <name>Rhinau</name>
   <trkseg>
