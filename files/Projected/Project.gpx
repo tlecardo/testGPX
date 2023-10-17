@@ -11978,8 +11978,8 @@
    <trkpt lat="41.364375" lon="2.100655"/>
    <trkpt lat="41.364161" lon="2.099672"/>
   </trkseg>
-<!--  
-  <name>3 (451 km)</name>
+
+  <name>Montpellier</name>
   <trkseg>
    <trkpt lat="45.650314" lon="5.078981"/>
    <trkpt lat="45.649121" lon="5.079726"/>
@@ -15319,7 +15319,7 @@
    <trkpt lat="42.698107" lon="2.878326"/>
    <trkpt lat="42.696134" lon="2.879157"/>
    <trkpt lat="42.695132" lon="2.879583"/>
-  </trkseg> -->
+  </trkseg>
 
   <name>Bordeaux</name>
   <trkseg>
