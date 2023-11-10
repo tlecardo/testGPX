@@ -25,6 +25,7 @@ async function renderMap() {
     div.innerHTML += '<i style="background-color: rgba(0, 0, 255, 0.7)"></i><span>Train</span><br>';
     div.innerHTML += '<i style="background-color: rgba(255, 0, 0, 0.5)"></i><span>Ferry</span><br>';
     div.innerHTML += '<i style="background-color: rgba(0, 0, 0, 0.5)"></i><span>Bus</span><br>';
+    div.innerHTML += '<i style="background-color: rgba(0, 255, 0, 0.5)"></i><span>Vélo</span><br>';
     //div.innerHTML += '<i class="icon" style="background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/194515-200.png);background-repeat: no-repeat;"></i><span>Grænse</span><br>';
     return div;
   };
@@ -117,7 +118,7 @@ async function renderMap() {
         async: true,
         marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
         gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "green", opacity: 0.3},
+        polyline_options: { color: "green", opacity: 0.4},
       }).addTo(map);
     })
 }
