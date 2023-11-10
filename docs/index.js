@@ -69,7 +69,7 @@ async function renderMap() {
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
           gpx_options: { joinTrackSegments: false },
-          polyline_options: { color: "blue", opacity: 0.7 },
+          polyline_options: { color: "blue", opacity: 0.5 },
         }).addTo(map);
       })
   }
@@ -95,7 +95,7 @@ async function renderMap() {
         async: true,
         marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
         gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "red", opacity: 0.4},
+        polyline_options: { color: "red", opacity: 0.5},
       }).addTo(map);
     })
 
@@ -107,6 +107,17 @@ async function renderMap() {
         marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
         gpx_options: { joinTrackSegments: false },
         polyline_options: { color: "black", opacity: 0.3},
+      }).addTo(map);
+    })
+
+    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Velo.gpx`)
+    .then(res => res.text())
+    .then(res => {
+      new L.GPX(res, {
+        async: true,
+        marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+        gpx_options: { joinTrackSegments: false },
+        polyline_options: { color: "green", opacity: 0.3},
       }).addTo(map);
     })
 }
