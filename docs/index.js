@@ -94,7 +94,7 @@ async function renderMap() {
         async: true,
         marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
         gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "red", opacity: 0.5},
+        polyline_options: { color: "red", opacity: 0.4},
       }).addTo(map);
     })
 
@@ -105,7 +105,7 @@ async function renderMap() {
         async: true,
         marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
         gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "black", opacity: 0.5},
+        polyline_options: { color: "black", opacity: 0.4},
       }).addTo(map);
     })
 }
