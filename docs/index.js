@@ -15,6 +15,79 @@ async function renderMap() {
   L.marker([45.500295, -73.567149]).bindTooltip(`<div class="city title">Montréal</div>`).addTo(map);
   L.marker([38.898487, -77.005291]).bindTooltip(`<div class="city title">Washington</div>`).addTo(map);
 
+
+  // Paris -> MTL
+  var pointCDG = new L.LatLng(48.964551909459175, 2.4384480054935675);
+  var pointYUL = new L.LatLng(45.468028770984326, -73.72763891598139);
+  var pointOrly = new L.LatLng(48.72321003482116, 2.379579320153127);
+  var pointLOA = new L.LatLng(38.781195172786624, -9.136007512647703);
+  var pointNLI = new L.LatLng(40.689618593607925, -74.16654738596186);
+  var pointHLX = new L.LatLng(44.87692235904648, -63.516319898656526);
+
+  var pointBCN = new L.LatLng(41.29830982560299, 2.0819028089297786);
+  var pointBVA = new L.LatLng(49.45333462604558, 2.116162098681791);
+
+  let icon = L.divIcon({
+      className: 'custom-div-icon',
+      html: '<div class="dot"></div>',
+      iconAnchor: [4, 12.3]
+  });
+
+  var planeMarker = L.Marker.movingMarker(
+    [pointCDG, pointYUL], 
+    [4500], 
+    options={
+      loop: true, 
+      icon: icon
+    }).addTo(map);
+  planeMarker.start();
+  L.polyline([pointCDG, pointYUL], { color: 'black', weight: 5, opacity: 0.03}).addTo(map);
+
+  // Paris <-> Lisbonne <-> MTL
+  var planeMarker = L.Marker.movingMarker(
+    [pointOrly, pointLOA, pointYUL, pointLOA, pointOrly], 
+    [2000, 4500, 4500, 2000], 
+    options={
+      loop: true,
+      icon: icon
+    }).addTo(map);
+  planeMarker.start();
+  L.polyline([pointOrly, pointLOA, pointYUL], { color: 'black',  weight: 5, opacity: 0.03 }).addTo(map);
+
+  // NYC -> Paris
+  var planeMarker = L.Marker.movingMarker(
+    [pointNLI, pointOrly], 
+    [4500], 
+    options={
+      loop: true,
+      icon: icon
+    }).addTo(map);
+  planeMarker.start();
+  L.polyline([pointNLI, pointOrly], { color: 'black', weight: 5, opacity: 0.03 }).addTo(map);
+
+  // MTL <-> HLX
+  var planeMarker = L.Marker.movingMarker(
+    [pointYUL, pointHLX, pointYUL], 
+    [1500, 1500], 
+    options={
+      loop: true,
+      icon: icon
+    }).addTo(map);
+  planeMarker.start();
+  L.polyline([pointYUL, pointHLX], { color: 'black', weight: 5, opacity: 0.03 }).addTo(map);
+
+  // Barcelone -> Beauvais
+  var planeMarker = L.Marker.movingMarker(
+    [pointBCN, pointBVA], 
+    [2000], 
+    options={
+      loop: true,
+      icon: icon
+    }).addTo(map);
+  planeMarker.start();
+  L.polyline([pointBCN, pointBVA], { color: 'black', weight: 5, opacity: 0.03 }).addTo(map);
+
+
   map.fitBounds(new L.LatLngBounds(new L.LatLng(32, -122.292293), new L.LatLng(45.500295, -73.567149)));
 
   var legend = L.control({ position: "bottomleft" });
