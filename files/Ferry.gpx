@@ -6,7 +6,7 @@
  version="1.1" 
  creator="BRouter-Web 99.61.0">
  <trk>
-  <name>NY</name>
+  <name>NY_1</name>
   <trkseg>
    <trkpt lat="40.584289" lon="-73.831558"/>
    <trkpt lat="40.584288" lon="-73.831553"/>
@@ -112,7 +112,53 @@
    <trkpt lat="40.743517" lon="-73.970995"/>
   </trkseg>
 
- <name>ny_Staten</name>
+  <name>NY_2</name>
+  <trkseg>
+  <trkpt lat="40.7568" lon="-73.952512"/>
+   <trkpt lat="40.756556" lon="-73.952357"/>
+   <trkpt lat="40.756338" lon="-73.952373"/>
+   <trkpt lat="40.75568" lon="-73.952794"/>
+   <trkpt lat="40.753086" lon="-73.955096"/>
+   <trkpt lat="40.750549" lon="-73.95751"/>
+   <trkpt lat="40.749765" lon="-73.958057"/>
+   <trkpt lat="40.749461" lon="-73.958197"/>
+   <trkpt lat="40.749074" lon="-73.958256"/>
+   <trkpt lat="40.748757" lon="-73.958107"/>
+   <trkpt lat="40.748337" lon="-73.957781"/>
+   <trkpt lat="40.748223" lon="-73.958874"/>
+   <trkpt lat="40.747835" lon="-73.960217"/>
+   <trkpt lat="40.744448" lon="-73.965953"/>
+   <trkpt lat="40.743817" lon="-73.9676"/>
+   <trkpt lat="40.743792" lon="-73.967666"/>
+   <trkpt lat="40.743452" lon="-73.969731"/>
+   <trkpt lat="40.743509" lon="-73.971"/>
+   <trkpt lat="40.742625" lon="-73.970133"/>
+   <trkpt lat="40.741789" lon="-73.969894"/>
+   <trkpt lat="40.740826" lon="-73.969707"/>
+   <trkpt lat="40.72825" lon="-73.969003"/>
+   <trkpt lat="40.727006" lon="-73.969132"/>
+   <trkpt lat="40.722042" lon="-73.969777"/>
+   <trkpt lat="40.710526" lon="-73.974496"/>
+   <trkpt lat="40.709065" lon="-73.975095"/>
+   <trkpt lat="40.707653" lon="-73.975305"/>
+   <trkpt lat="40.702512" lon="-73.973795"/>
+   <trkpt lat="40.701817" lon="-73.97359"/>
+   <trkpt lat="40.704824" lon="-73.975418"/>
+   <trkpt lat="40.706023" lon="-73.97671"/>
+   <trkpt lat="40.707281" lon="-73.979235"/>
+   <trkpt lat="40.707577" lon="-73.980228"/>
+   <trkpt lat="40.707698" lon="-73.981932"/>
+   <trkpt lat="40.707574" lon="-73.983642"/>
+   <trkpt lat="40.706591" lon="-73.993283"/>
+   <trkpt lat="40.706344" lon="-73.994081"/>
+   <trkpt lat="40.7059" lon="-73.995518"/>
+   <trkpt lat="40.704696" lon="-73.998025"/>
+   <trkpt lat="40.70312" lon="-74.001671"/>
+   <trkpt lat="40.702541" lon="-74.003736"/>
+   <trkpt lat="40.70245" lon="-74.005503"/>
+  </trkseg>
+
+ <name>NY_Staten</name>
   <trkseg>
    <trkpt lat="40.644108" lon="-74.071824"/>
    <trkpt lat="40.646256" lon="-74.066684"/>
