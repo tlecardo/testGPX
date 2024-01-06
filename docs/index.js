@@ -104,7 +104,7 @@ async function renderMap() {
 
   legend.addTo(map);
 
-  let namesTracks = ['Lake_Shore_Limited', 'Empire_Builder', 'California_Zephyr', 'Southwest_Chief',
+  let namesTracks = ['Lake_Shore_Limited_1', 'Lake_Shore_Limited_2', 'Empire_Builder', 'California_Zephyr', 'Southwest_Chief',
     'Sunset_Limited', 'Adirondack', 'Crescent', 'Coast_Starlight']
   
   for await (let name of namesTracks) {
