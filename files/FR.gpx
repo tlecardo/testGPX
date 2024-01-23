@@ -682,6 +682,50 @@
    <trkpt lat="48.907967" lon="2.280167"/>
    <trkpt lat="48.907869" lon="2.280306"/>
   </trkseg>
+
+  <name>Chatelet_Gare-du-Nord</name>
+  <trkseg>
+   <trkpt lat="48.860933" lon="2.347578"/>
+   <trkpt lat="48.86251" lon="2.346903"/>
+   <trkpt lat="48.862718" lon="2.346814"/>
+   <trkpt lat="48.863592" lon="2.34645"/>
+   <trkpt lat="48.864204" lon="2.34614"/>
+   <trkpt lat="48.865645" lon="2.34559"/>
+   <trkpt lat="48.865999" lon="2.345491"/>
+   <trkpt lat="48.86647" lon="2.345413"/>
+   <trkpt lat="48.866884" lon="2.345379"/>
+   <trkpt lat="48.866933" lon="2.345376"/>
+   <trkpt lat="48.86741" lon="2.3454"/>
+   <trkpt lat="48.867732" lon="2.345434"/>
+   <trkpt lat="48.867869" lon="2.34546"/>
+   <trkpt lat="48.868246" lon="2.345553"/>
+   <trkpt lat="48.868618" lon="2.345666"/>
+   <trkpt lat="48.868943" lon="2.345798"/>
+   <trkpt lat="48.869285" lon="2.345965"/>
+   <trkpt lat="48.869671" lon="2.346189"/>
+   <trkpt lat="48.874856" lon="2.349828"/>
+   <trkpt lat="48.875184" lon="2.350113"/>
+   <trkpt lat="48.875499" lon="2.350455"/>
+   <trkpt lat="48.875738" lon="2.350754"/>
+   <trkpt lat="48.876027" lon="2.351202"/>
+   <trkpt lat="48.876436" lon="2.351914"/>
+   <trkpt lat="48.877103" lon="2.353079"/>
+   <trkpt lat="48.877355" lon="2.353518"/>
+   <trkpt lat="48.87741" lon="2.353615"/>
+   <trkpt lat="48.877819" lon="2.354237"/>
+   <trkpt lat="48.87828" lon="2.354796"/>
+   <trkpt lat="48.878941" lon="2.355497"/>
+   <trkpt lat="48.879204" lon="2.355777"/>
+   <trkpt lat="48.87965" lon="2.356249"/>
+   <trkpt lat="48.879978" lon="2.356596"/>
+   <trkpt lat="48.880167" lon="2.356762"/>
+   <trkpt lat="48.880345" lon="2.35692"/>
+   <trkpt lat="48.880531" lon="2.35705"/>
+   <trkpt lat="48.880836" lon="2.357228"/>
+   <trkpt lat="48.881391" lon="2.357486"/>
+   <trkpt lat="48.881404" lon="2.357492"/>
+   <trkpt lat="48.882098" lon="2.357789"/>
+  </trkseg>
  
   <name>Juvisy-sur-Orge Paris</name>
   <trkseg>
@@ -1057,6 +1101,26 @@
    <trkpt lat="48.842671" lon="2.376288"/>
    <trkpt lat="48.843664" lon="2.374487"/>
    <trkpt lat="48.844254" lon="2.373401"/>
+   <trkpt lat="48.844817" lon="2.372369"><ele>43.5</ele></trkpt>
+   <trkpt lat="48.845984" lon="2.370617"><ele>43.5</ele></trkpt>
+   <trkpt lat="48.848641" lon="2.367294"><ele>43.5</ele></trkpt>
+   <trkpt lat="48.851592" lon="2.363598"><ele>43.5</ele></trkpt>
+   <trkpt lat="48.854431" lon="2.360052"/>
+   <trkpt lat="48.855036" lon="2.358935"/>
+   <trkpt lat="48.855485" lon="2.357656"/>
+   <trkpt lat="48.855801" lon="2.356278"/>
+   <trkpt lat="48.856069" lon="2.354163"/>
+   <trkpt lat="48.856447" lon="2.352594"/>
+   <trkpt lat="48.856864" lon="2.351412"/>
+   <trkpt lat="48.857485" lon="2.350333"/>
+   <trkpt lat="48.85817" lon="2.349634"/>
+   <trkpt lat="48.860161" lon="2.348213"/>
+   <trkpt lat="48.860607" lon="2.347976"/>
+   <trkpt lat="48.860767" lon="2.347906"/>
+   <trkpt lat="48.862936" lon="2.346965"/>
+   <trkpt lat="48.863591" lon="2.346645"/>
+   <trkpt lat="48.864342" lon="2.346279"/>
+   <trkpt lat="48.864378" lon="2.346258"/>
   </trkseg>
  
   <name>11 (22,4 km)</name>
