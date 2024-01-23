@@ -144,7 +144,7 @@ async function renderMap() {
     }).addTo(map);
   })
 
-  let histTracks = ['BE', 'UK', 'FR', 'CA']
+  let histTracks = ['BE', 'UK', 'FR', 'CA', 'ES']
   for await (let name of histTracks) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${name}.gpx`)
       .then(res => res.text())
