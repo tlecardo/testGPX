@@ -173,6 +173,33 @@
    <trkpt lat="40.700471" lon="-74.013005"/>
   </trkseg>
 
+<name>Boston</name>
+  <trkseg>
+   <trkpt lat="42.359431" lon="-71.050455"/>
+   <trkpt lat="42.359431" lon="-71.050456"/>
+   <trkpt lat="42.359873" lon="-71.047576"/>
+   <trkpt lat="42.359962" lon="-71.047268"/>
+   <trkpt lat="42.359987" lon="-71.047205"/>
+   <trkpt lat="42.360066" lon="-71.047013"/>
+   <trkpt lat="42.360371" lon="-71.046685"/>
+   <trkpt lat="42.360689" lon="-71.046418"/>
+   <trkpt lat="42.361117" lon="-71.046236"/>
+   <trkpt lat="42.361547" lon="-71.046151"/>
+   <trkpt lat="42.362337" lon="-71.046132"/>
+   <trkpt lat="42.362995" lon="-71.046138"/>
+   <trkpt lat="42.364316" lon="-71.046234"/>
+   <trkpt lat="42.365326" lon="-71.046307"/>
+   <trkpt lat="42.366205" lon="-71.046718"/>
+   <trkpt lat="42.366926" lon="-71.047346"/>
+   <trkpt lat="42.370935" lon="-71.051147"/>
+   <trkpt lat="42.371823" lon="-71.05198"/>
+   <trkpt lat="42.372309" lon="-71.052435"/>
+   <trkpt lat="42.372463" lon="-71.052549"/>
+   <trkpt lat="42.372589" lon="-71.052592"/>
+   <trkpt lat="42.372748" lon="-71.052549"/>
+   <trkpt lat="42.372754" lon="-71.052538"/>
+  </trkseg>
+
   <name>Tadoussac</name>
   <trkseg>
    <trkpt lat="48.126526" lon="-69.729707"/>

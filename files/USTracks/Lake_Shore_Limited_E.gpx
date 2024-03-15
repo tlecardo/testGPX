@@ -5,7 +5,7 @@
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  <trk>
-  <name>Lake Shore Limited 2</name>
+  <name>Lake Shore Limited East</name>
   <trkseg>
    <trkpt lat="42.645419" lon="-73.740733"/>
    <trkpt lat="42.645115" lon="-73.740809"/>
