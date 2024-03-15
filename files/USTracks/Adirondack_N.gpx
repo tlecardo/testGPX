@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- track-length = 613786 filtered ascend = 813 plain-ascend = 31 time = 11h 36m -->
+<!-- track-length = 613786 filtered ascend = 813 plain-ascend = 31 time = 7h 50m -->
 <gpx 
  xmlns="http://www.topografix.com/GPX/1/1" 
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -7,6 +7,9 @@
  <trk>
   <name>Adirondack North</name>
   <trkseg>
+   <trkpt lat="42.645199" lon="-73.740788"/>
+   <trkpt lat="42.645463" lon="-73.740722"/>
+   <trkpt lat="42.646513" lon="-73.740474"/>
    <trkpt lat="42.64652" lon="-73.740472"/>
    <trkpt lat="42.646775" lon="-73.740382"/>
    <trkpt lat="42.646985" lon="-73.740283"/>

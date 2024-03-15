@@ -134,7 +134,7 @@ async function renderMap() {
   }
 
 
-for await (let name of ['Adirondack_N', 'Lake_Shore_Limited_E', 'Crescent_S']) {
+for await (let name of ['Adirondack_N', 'Lake_Shore_Limited_E', 'Crescent_N']) {
   await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.gpx`)
     .then(res => res.text())
     .then(res => {
