@@ -105,7 +105,7 @@ async function renderMap() {
   legend.addTo(map);
 
   let namesTracks = ['Lake_Shore_Limited_W', 'Empire_Builder', 'California_Zephyr', 'Southwest_Chief',
-    'Sunset_Limited', 'Adirondack_S', 'Crescent_S', 'Coast_Starlight', 'Northeast_Regional_N']
+    'Sunset_Limited', 'Adirondack_S', 'Crescent_S', 'Coast_Starlight']
   
   for await (let name of namesTracks) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.gpx`)
@@ -134,7 +134,7 @@ async function renderMap() {
   }
 
 
-for await (let name of ['Adirondack_N', 'Lake_Shore_Limited_E', 'Crescent_N']) {
+for await (let name of ['Adirondack_N', 'Lake_Shore_Limited_E', 'Crescent_N', 'Northeast_Regional_N']) {
   await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.gpx`)
     .then(res => res.text())
     .then(res => {
