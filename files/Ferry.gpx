@@ -363,6 +363,19 @@
    <trkpt lat="48.381019" lon="-4.486761"/>
   </trkseg>
 
+  <name>San Juan</name>
+  <trkseg>
+   <trkpt lat="18.443883" lon="-66.11681"/>
+   <trkpt lat="18.443856" lon="-66.116857"/>
+   <trkpt lat="18.443914" lon="-66.1169"/>
+   <trkpt lat="18.444005" lon="-66.116937"/>
+   <trkpt lat="18.460173" lon="-66.112693"/>
+   <trkpt lat="18.460732" lon="-66.112703"/>
+   <trkpt lat="18.46122" lon="-66.112761"/>
+   <trkpt lat="18.46239" lon="-66.113006"/>
+   <trkpt lat="18.462773" lon="-66.113104"/>
+  </trkseg>
+
   <name>MLT3</name>
   <trkseg>
    <trkpt lat="45.595321" lon="-73.507792"/>

@@ -31,6 +31,33 @@ async function renderMap() {
   var pointBCN = new L.LatLng(41.29830982560299, 2.0819028089297786);
   var pointBVA = new L.LatLng(49.45333462604558, 2.116162098681791);
 
+  var pointFLL = new L.LatLng(26.076756, -80.150874);
+  var pointMIA = new L.LatLng(25.794470, -80.290558);
+  var pointSJU = new L.LatLng(18.442935, -66.002363);
+
+
+  // MTL <-> Fort Laudernale
+  var planeMarker = L.Marker.movingMarker(
+    [pointYUL, pointFLL, pointYUL], 
+    [3000, 3000], 
+    options={
+      loop: true, 
+      icon: iconPlane
+    }).addTo(map);
+  planeMarker.start();
+  L.polyline([pointYUL, pointFLL, pointYUL], { color: 'black', weight: 5, opacity: 0.03}).addTo(map);
+
+  // Miami <-> San Juan
+  var planeMarker = L.Marker.movingMarker(
+    [pointMIA, pointSJU, pointMIA], 
+    [2500, 2500], 
+    options={
+      loop: true, 
+      icon: iconPlane
+    }).addTo(map);
+  planeMarker.start();
+  L.polyline([pointMIA, pointSJU, pointMIA], { color: 'black', weight: 5, opacity: 0.03}).addTo(map);
+
   // Paris -> MTL
   var planeMarker = L.Marker.movingMarker(
     [pointCDG, pointYUL], 
@@ -105,7 +132,7 @@ async function renderMap() {
   legend.addTo(map);
 
   let namesTracks = ['Lake_Shore_Limited_W', 'Empire_Builder', 'California_Zephyr', 'Southwest_Chief',
-    'Sunset_Limited', 'Adirondack_S', 'Crescent_S', 'Coast_Starlight']
+    'Sunset_Limited', 'Adirondack_S', 'Crescent_S', 'Coast_Starlight', 'TriRail']
   
   for await (let name of namesTracks) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.gpx`)
