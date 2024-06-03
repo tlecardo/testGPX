@@ -201,7 +201,7 @@ for await (let name of ['Adirondack_N', 'Lake_Shore_Limited_E', 'Crescent_N', 'N
       })
   }
 
-  let projTracks = ['Exo_1', 'Saguenay']
+  let projTracks = ['Exo_1']
   for await (let name of projTracks) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Projected/${name}.gpx`)
       .then(res => res.text())
