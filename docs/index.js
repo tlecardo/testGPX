@@ -237,6 +237,18 @@ for await (let name of ['Adirondack_N', 'Lake_Shore_Limited_E', 'Crescent_N', 'N
       }).addTo(map);
     })
 
+    
+    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Voiture.gpx`)
+    .then(res => res.text())
+    .then(res => {
+      new L.GPX(res, {
+        async: true,
+        marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+        gpx_options: { joinTrackSegments: false },
+        polyline_options: { color: "black", opacity: 0.3},
+      }).addTo(map);
+    })
+
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Velo.gpx`)
     .then(res => res.text())
     .then(res => {
