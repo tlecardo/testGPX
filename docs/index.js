@@ -31,87 +31,102 @@ async function renderMap() {
   var pointBCN = new L.LatLng(41.29830982560299, 2.0819028089297786);
   var pointBVA = new L.LatLng(49.45333462604558, 2.116162098681791);
 
+  var pointYYZ = new L.LatLng(43.669982900515684, -79.61022303434495);
+  var pointKEF = new L.LatLng(63.98511963601736, -22.605642993309147);
+
   var pointFLL = new L.LatLng(26.076756, -80.150874);
   var pointMIA = new L.LatLng(25.794470, -80.290558);
   var pointSJU = new L.LatLng(18.442935, -66.002363);
 
 
-  // MTL <-> Fort Laudernale
+  // Tor <-> Reyk
   var planeMarker = L.Marker.movingMarker(
-    [pointYUL, pointFLL, pointYUL], 
-    [3000, 3000], 
-    options={
-      loop: true, 
+    [pointYYZ, pointKEF, pointCDG, pointKEF, pointYYZ],
+    [5000, 3000, 3000, 5000],
+    options = {
+      loop: true,
       icon: iconPlane
     }).addTo(map);
   planeMarker.start();
-  L.polyline([pointYUL, pointFLL, pointYUL], { color: 'black', weight: 5, opacity: 0.03}).addTo(map);
+  //L.polyline([pointYYZ, pointKEF, pointCDG, pointKEF, pointYYZ], { color: 'black', weight: 5, opacity: 0.03}).addTo(map);
+
+
+  // MTL <-> Fort Laudernale
+  var planeMarker = L.Marker.movingMarker(
+    [pointYUL, pointFLL, pointYUL],
+    [3000, 3000],
+    options = {
+      loop: true,
+      icon: iconPlane
+    }).addTo(map);
+  planeMarker.start();
+  //L.polyline([pointYUL, pointFLL, pointYUL], { color: 'black', weight: 5, opacity: 0.03}).addTo(map);
 
   // Miami <-> San Juan
   var planeMarker = L.Marker.movingMarker(
-    [pointMIA, pointSJU, pointMIA], 
-    [2500, 2500], 
-    options={
-      loop: true, 
+    [pointMIA, pointSJU, pointMIA],
+    [2500, 2500],
+    options = {
+      loop: true,
       icon: iconPlane
     }).addTo(map);
   planeMarker.start();
-  L.polyline([pointMIA, pointSJU, pointMIA], { color: 'black', weight: 5, opacity: 0.03}).addTo(map);
+  //L.polyline([pointMIA, pointSJU, pointMIA], { color: 'black', weight: 5, opacity: 0.03}).addTo(map);
 
   // Paris -> MTL
   var planeMarker = L.Marker.movingMarker(
-    [pointCDG, pointYUL], 
-    [4500], 
-    options={
-      loop: true, 
+    [pointCDG, pointYUL],
+    [4500],
+    options = {
+      loop: true,
       icon: iconPlane
     }).addTo(map);
   planeMarker.start();
-  L.polyline([pointCDG, pointYUL], { color: 'black', weight: 5, opacity: 0.03}).addTo(map);
+  //L.polyline([pointCDG, pointYUL], { color: 'black', weight: 5, opacity: 0.03}).addTo(map);
 
   // Paris <-> Lisbonne <-> MTL
   var planeMarker = L.Marker.movingMarker(
-    [pointOrly, pointLOA, pointYUL, pointLOA, pointOrly], 
-    [2000, 4500, 4500, 2000], 
-    options={
+    [pointOrly, pointLOA, pointYUL, pointLOA, pointOrly],
+    [2000, 4500, 4500, 2000],
+    options = {
       loop: true,
       icon: iconPlane
     }).addTo(map);
   planeMarker.start();
-  L.polyline([pointOrly, pointLOA, pointYUL], { color: 'black',  weight: 5, opacity: 0.03 }).addTo(map);
+  //L.polyline([pointOrly, pointLOA, pointYUL], { color: 'black',  weight: 5, opacity: 0.03 }).addTo(map);
 
   // NYC -> Paris
   var planeMarker = L.Marker.movingMarker(
-    [pointNLI, pointOrly], 
-    [4500], 
-    options={
+    [pointNLI, pointOrly],
+    [4500],
+    options = {
       loop: true,
       icon: iconPlane
     }).addTo(map);
   planeMarker.start();
-  L.polyline([pointNLI, pointOrly], { color: 'black', weight: 5, opacity: 0.03 }).addTo(map);
+  //L.polyline([pointNLI, pointOrly], { color: 'black', weight: 5, opacity: 0.03 }).addTo(map);
 
   // MTL <-> HLX
   var planeMarker = L.Marker.movingMarker(
-    [pointYUL, pointHLX, pointYUL], 
-    [1500, 1500], 
-    options={
+    [pointYUL, pointHLX, pointYUL],
+    [1500, 1500],
+    options = {
       loop: true,
       icon: iconPlane
     }).addTo(map);
   planeMarker.start();
-  L.polyline([pointYUL, pointHLX], { color: 'black', weight: 5, opacity: 0.03 }).addTo(map);
+  //L.polyline([pointYUL, pointHLX], { color: 'black', weight: 5, opacity: 0.03 }).addTo(map);
 
   // Barcelone -> Beauvais
   var planeMarker = L.Marker.movingMarker(
-    [pointBCN, pointBVA], 
-    [2000], 
-    options={
+    [pointBCN, pointBVA],
+    [2000],
+    options = {
       loop: true,
       icon: iconPlane
     }).addTo(map);
   planeMarker.start();
-  L.polyline([pointBCN, pointBVA], { color: 'black', weight: 5, opacity: 0.03 }).addTo(map);
+  //L.polyline([pointBCN, pointBVA], { color: 'black', weight: 5, opacity: 0.03 }).addTo(map);
 
 
   map.fitBounds(new L.LatLngBounds(new L.LatLng(32, -122.292293), new L.LatLng(45.500295, -73.567149)));
@@ -133,7 +148,7 @@ async function renderMap() {
 
   let namesTracks = ['Lake_Shore_Limited_W', 'Empire_Builder', 'California_Zephyr', 'Southwest_Chief',
     'Sunset_Limited', 'Adirondack_S', 'Crescent_S', 'Coast_Starlight']
-  
+
   for await (let name of namesTracks) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.gpx`)
       .then(res => res.text())
@@ -152,7 +167,7 @@ async function renderMap() {
         new L.GPX(res, {
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-          polyline_options: { color: "blue", opacity: 0.5, dashArray:"10 10"},
+          polyline_options: { color: "blue", opacity: 0.5, dashArray: "10 10" },
         }).bindTooltip(
           `<div class="track title">${name.replaceAll("_", " ")}</div><div class="track info">${dist} kms</div><div class="track info">${time}</div>`,
           { sticky: true, }
@@ -161,31 +176,31 @@ async function renderMap() {
   }
 
 
-for await (let name of ['Adirondack_N', 'Lake_Shore_Limited_E', 'Crescent_N', 'Northeast_Regional_N', 'TriRail']) {
-  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.gpx`)
-    .then(res => res.text())
-    .then(res => {
+  for await (let name of ['Adirondack_N', 'Lake_Shore_Limited_E', 'Crescent_N', 'Northeast_Regional_N', 'TriRail']) {
+    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.gpx`)
+      .then(res => res.text())
+      .then(res => {
 
-      let time = res.match(/time = [0-9]*h [0-9]*m/)[0]
-        .replace("time = ", "")
+        let time = res.match(/time = [0-9]*h [0-9]*m/)[0]
+          .replace("time = ", "")
 
-      let dist = res.match(/track-length = [0-9]* filtered/)[0]
-        .replace("track-length = ", "")
-        .replace(" filtered", "")
+        let dist = res.match(/track-length = [0-9]* filtered/)[0]
+          .replace("track-length = ", "")
+          .replace(" filtered", "")
 
-      dist = Math.round(dist / 100) / 10
-      dist = parseInt(dist).toLocaleString()
+        dist = Math.round(dist / 100) / 10
+        dist = parseInt(dist).toLocaleString()
 
-      new L.GPX(res, {
-        async: true,
-        marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-        polyline_options: { color: "blue", opacity: 0.5},
-      }).bindTooltip(
-        `<div class="track title">${name.replaceAll("_", " ")}</div><div class="track info">${dist} kms</div><div class="track info">${time}</div>`,
-        { sticky: true, }
-      ).addTo(map);
-    })
-}
+        new L.GPX(res, {
+          async: true,
+          marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+          polyline_options: { color: "blue", opacity: 0.5 },
+        }).bindTooltip(
+          `<div class="track title">${name.replaceAll("_", " ")}</div><div class="track info">${dist} kms</div><div class="track info">${time}</div>`,
+          { sticky: true, }
+        ).addTo(map);
+      })
+  }
 
   let histTracks = ['BE', 'UK', 'FR', 'CA', 'ES']
   for await (let name of histTracks) {
@@ -201,7 +216,7 @@ for await (let name of ['Adirondack_N', 'Lake_Shore_Limited_E', 'Crescent_N', 'N
       })
   }
 
-  let projTracks = ['Exo_1']
+  let projTracks = ['Exo_1', 'Ottawa']
   for await (let name of projTracks) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Projected/${name}.gpx`)
       .then(res => res.text())
@@ -210,7 +225,7 @@ for await (let name of ['Adirondack_N', 'Lake_Shore_Limited_E', 'Crescent_N', 'N
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
           gpx_options: { joinTrackSegments: false },
-          polyline_options: { color: "blue", opacity: 0.5, dashArray:"10 10"},
+          polyline_options: { color: "blue", opacity: 0.5, dashArray: "10 10" },
         }).addTo(map);
       })
   }
@@ -222,41 +237,41 @@ for await (let name of ['Adirondack_N', 'Lake_Shore_Limited_E', 'Crescent_N', 'N
         async: true,
         marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
         gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "red", opacity: 0.5},
+        polyline_options: { color: "red", opacity: 0.5 },
       }).addTo(map);
     })
 
-    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Bus.gpx`)
+  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Bus.gpx`)
     .then(res => res.text())
     .then(res => {
       new L.GPX(res, {
         async: true,
         marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
         gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "black", opacity: 0.3},
+        polyline_options: { color: "black", opacity: 0.3 },
       }).addTo(map);
     })
 
-    
-    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Voiture.gpx`)
+
+  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Voiture.gpx`)
     .then(res => res.text())
     .then(res => {
       new L.GPX(res, {
         async: true,
         marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
         gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "black", opacity: 0.3},
+        polyline_options: { color: "black", opacity: 0.3 },
       }).addTo(map);
     })
 
-    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Velo.gpx`)
+  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Velo.gpx`)
     .then(res => res.text())
     .then(res => {
       new L.GPX(res, {
         async: true,
         marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
         gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "green", opacity: 0.4},
+        polyline_options: { color: "green", opacity: 0.4 },
       }).addTo(map);
     })
 }
