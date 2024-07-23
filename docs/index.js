@@ -22,17 +22,17 @@ async function renderMap() {
   L.marker([45.500295, -73.567149]).bindTooltip(`<div class="city title">Montréal</div>`).addTo(map);
   L.marker([38.898487, -77.005291]).bindTooltip(`<div class="city title">Washington</div>`).addTo(map);
   */
-  var pointCDG = new L.LatLng(48.964551909459175, 2.4384480054935675);
-  var pointYUL = new L.LatLng(45.468028770984326, -73.72763891598139);
-  var pointOrly = new L.LatLng(48.72321003482116, 2.379579320153127);
-  var pointLOA = new L.LatLng(38.781195172786624, -9.136007512647703);
-  var pointNLI = new L.LatLng(40.689618593607925, -74.16654738596186);
-  var pointHLX = new L.LatLng(44.87692235904648, -63.516319898656526);
-  var pointBCN = new L.LatLng(41.29830982560299, 2.0819028089297786);
-  var pointBVA = new L.LatLng(49.45333462604558, 2.116162098681791);
+  var pointCDG = new L.LatLng(48.9645519, 2.438448005);
+  var pointYUL = new L.LatLng(45.4680288, -73.7276389);
+  var pointOrly = new L.LatLng(48.723210, 2.379579320);
+  var pointLOA = new L.LatLng(38.7811952, -9.13600751);
+  var pointNLI = new L.LatLng(40.6896186, -74.1665474);
+  var pointHLX = new L.LatLng(44.8769224, -63.5163199);
+  var pointBCN = new L.LatLng(41.2983098, 2.081902809);
+  var pointBVA = new L.LatLng(49.4533346, 2.116162099);
 
-  var pointYYZ = new L.LatLng(43.669982900515684, -79.61022303434495);
-  var pointKEF = new L.LatLng(63.98511963601736, -22.605642993309147);
+  var pointYMH = new L.LatLng(43.1737220, -79.9232869);
+  var pointKEF = new L.LatLng(63.9851196, -22.6056430);
 
   var pointFLL = new L.LatLng(26.076756, -80.150874);
   var pointMIA = new L.LatLng(25.794470, -80.290558);
@@ -41,7 +41,7 @@ async function renderMap() {
 
   // Tor <-> Reyk
   var planeMarker = L.Marker.movingMarker(
-    [pointYYZ, pointKEF, pointCDG, pointKEF, pointYYZ],
+    [pointYMH, pointKEF, pointCDG, pointKEF, pointYMH],
     [5000, 3000, 3000, 5000],
     options = {
       loop: true,
