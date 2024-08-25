@@ -141,7 +141,7 @@ async function renderMap() {
   legend.addTo(map);
 
   for await (let country of ['US', 'UK']) {
-  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${country}.geojson`)
+  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${country}.geojson`)
       .then(res => res.json())
       .then(res => {
         new L.geoJSON(res, {
