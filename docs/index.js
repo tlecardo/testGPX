@@ -146,11 +146,11 @@ async function renderMap() {
 
   legend.addTo(map);
 
-  for await (let name of ['Empire_Builder', 'Crescent_S']) {
+  for await (let name of ['Empire_Builder', 'Crescent_S', 'Lake_Shore_Limited_W', 'Sunset_Limited', 'Adirondack_S', 'Coast_Starlight']) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.geojson`)
       .then(res => res.json())
       .then(res => {
-        new L.GPX(res, {
+        new L.geoJSON(res, {
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
           polyline_options: { color: "blue", opacity: 0.5, dashArray: "10 10" },
@@ -158,40 +158,11 @@ async function renderMap() {
       })
   }
 
-  let namesTracks = ['Lake_Shore_Limited_W', 'Sunset_Limited', 'Adirondack_S', 'Coast_Starlight']
-
-  for await (let name of namesTracks) {
-    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.gpx`)
-      .then(res => res.text())
-      .then(res => {
-
-        let time = res.match(/time = [0-9]*h [0-9]*m/)[0]
-          .replace("time = ", "")
-
-        let dist = res.match(/track-length = [0-9]* filtered/)[0]
-          .replace("track-length = ", "")
-          .replace(" filtered", "")
-
-        dist = Math.round(dist / 100) / 10
-        dist = parseInt(dist).toLocaleString()
-
-        new L.GPX(res, {
-          async: true,
-          marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-          polyline_options: { color: "blue", opacity: 0.5, dashArray: "10 10" },
-        }).bindTooltip(
-          `<div class="track title">${name.replaceAll("_", " ")}</div><div class="track info">${dist} kms</div><div class="track info">${time}</div>`,
-          { sticky: true, }
-        ).addTo(map);
-      })
-  }
-
-
   for await (let name of ['Adirondack_N', 'Lake_Shore_Limited_E', 'Crescent_N', 'Northeast_Regional_N', 'TriRail']) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.gpx`)
       .then(res => res.text())
       .then(res => {
-
+        /*
         let time = res.match(/time = [0-9]*h [0-9]*m/)[0]
           .replace("time = ", "")
 
@@ -201,15 +172,18 @@ async function renderMap() {
 
         dist = Math.round(dist / 100) / 10
         dist = parseInt(dist).toLocaleString()
-
-        new L.GPX(res, {
+        */
+        new L.geoJSON(res, {
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
           polyline_options: { color: "blue", opacity: 0.5 },
-        }).bindTooltip(
+        }).addTo(map);
+        /*
+        ).bindTooltip(
           `<div class="track title">${name.replaceAll("_", " ")}</div><div class="track info">${dist} kms</div><div class="track info">${time}</div>`,
           { sticky: true, }
         ).addTo(map);
+        */
       })
   }
 
