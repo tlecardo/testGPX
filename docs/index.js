@@ -1,3 +1,9 @@
+let convertString = function (milisecs) {
+  var diff_hours = Math.floor(milisecs / 3600, 1)
+  var diff_minutes = (milisecs - 3600 * diff_hours) / 60
+  return `${diff_hours}h${diff_minutes}m`
+}
+
 async function renderMap() {
   const map = L.map(document.querySelector(".map"));
 
@@ -10,18 +16,6 @@ async function renderMap() {
     iconAnchor: [4, 12.3]
   });
 
-  /*
-  L.marker([42.641298, -73.741554]).bindTooltip(`<div class="city title">Albany</div>`).addTo(map);
-  L.marker([41.878773, -87.638622]).bindTooltip(`<div class="city title">Chicago</div>`).addTo(map);
-  L.marker([47.597811, -122.329564]).bindTooltip(`<div class="city title">Seattle</div>`).addTo(map);
-  L.marker([37.840341, -122.292293]).bindTooltip(`<div class="city title">San Francisco</div>`).addTo(map);
-  L.marker([40.944502, -90.363511]).bindTooltip(`<div class="city title">Galesburg</div>`).addTo(map);
-  L.marker([34.055863, -118.234245]).bindTooltip(`<div class="city title">Los Angeles</div>`).addTo(map);
-  L.marker([29.946275, -90.078913]).bindTooltip(`<div class="city title">La Nouvelle-Orléans</div>`).addTo(map);
-  L.marker([40.750262, -73.992824]).bindTooltip(`<div class="city title">New York</div>`).addTo(map);
-  L.marker([45.500295, -73.567149]).bindTooltip(`<div class="city title">Montréal</div>`).addTo(map);
-  L.marker([38.898487, -77.005291]).bindTooltip(`<div class="city title">Washington</div>`).addTo(map);
-  */
   var pointCDG = new L.LatLng(48.9645519, 2.438448005);
   var pointYUL = new L.LatLng(45.4680288, -73.7276389);
   var pointOrly = new L.LatLng(48.723210, 2.379579320);
