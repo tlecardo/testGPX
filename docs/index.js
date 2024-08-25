@@ -140,7 +140,8 @@ async function renderMap() {
 
   legend.addTo(map);
 
-  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/US.geojson`)
+  for await (let country of ['US', 'UK']) {
+  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${country}.geojson`)
       .then(res => res.json())
       .then(res => {
         new L.geoJSON(res, {
@@ -156,6 +157,7 @@ async function renderMap() {
           style: { color: "blue", opacity: 0.5},
         }).addTo(map);
       })
+    }
 
   for await (let name of ['Crescent_S', 'Lake_Shore_Limited_W', 'Lake_Shore_Limited_E', 'Crescent_N']) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.geojson`)
@@ -176,7 +178,7 @@ async function renderMap() {
       })
   }
 
-  let histTracks = ['BE', 'UK', 'FR', 'CA', 'ES']
+  let histTracks = ['BE', 'FR', 'CA', 'ES']
   for await (let name of histTracks) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${name}.gpx`)
       .then(res => res.text())
