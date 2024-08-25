@@ -151,9 +151,16 @@ async function renderMap() {
       .then(res => res.json())
       .then(res => {
         new L.geoJSON(res, {
+          onEachFeature: function (feature, layer) {
+            layer.bindTooltip(
+              `<center class="track title">${feature.properties.name}</center>` +
+              `<center>${(feature.properties.distance / 1000).toFixed(2)} km</center>` +
+              `<center>${convertString(feature.properties.time / 1000)}</center>`,
+              { sticky: true, });
+          },
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-          polyline_options: { color: "blue", opacity: 0.5, dashArray: "10 10" },
+          style: { color: "blue", opacity: 0.5, dashArray: "5 10" },
         }).addTo(map);
       })
   }
@@ -162,28 +169,19 @@ async function renderMap() {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.geojson`)
       .then(res => res.json())
       .then(res => {
-        /*
-        let time = res.match(/time = [0-9]*h [0-9]*m/)[0]
-          .replace("time = ", "")
 
-        let dist = res.match(/track-length = [0-9]* filtered/)[0]
-          .replace("track-length = ", "")
-          .replace(" filtered", "")
-
-        dist = Math.round(dist / 100) / 10
-        dist = parseInt(dist).toLocaleString()
-        */
         new L.geoJSON(res, {
+          onEachFeature: function (feature, layer) {
+            layer.bindTooltip(
+              `<center class="track title">${feature.properties.name}</center>` +
+              `<center>${(feature.properties.distance / 1000).toFixed(2)} km</center>` +
+              `<center>${convertString(feature.properties.time / 1000)}</center>`,
+              { sticky: true, });
+          },
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-          polyline_options: { color: "blue", opacity: 0.5 },
+          style: { color: "blue", opacity: 0.5, dashArray: "5 10" },
         }).addTo(map);
-        /*
-        ).bindTooltip(
-          `<div class="track title">${name.replaceAll("_", " ")}</div><div class="track info">${dist} kms</div><div class="track info">${time}</div>`,
-          { sticky: true, }
-        ).addTo(map);
-        */
       })
   }
 
