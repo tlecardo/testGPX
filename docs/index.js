@@ -140,7 +140,24 @@ async function renderMap() {
 
   legend.addTo(map);
 
-  for await (let name of ['Empire_Builder', 'Crescent_S', 'Lake_Shore_Limited_W', 'Sunset_Limited', 'Adirondack', 'Coast_Starlight', 'Lake_Shore_Limited_E', 'Crescent_N', 'Northeast_Regional_N', 'TriRail']) {
+  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/US.geojson`)
+      .then(res => res.json())
+      .then(res => {
+        new L.geoJSON(res, {
+          onEachFeature: function (feature, layer) {
+            layer.bindTooltip(
+              `<center class="track title">${feature.properties.name}</center>` +
+              `<center>${(feature.properties.distance / 1000).toFixed(2)} km</center>` +
+              `<center>${convertString(feature.properties.time / 1000)}</center>`,
+              { sticky: true, });
+          },
+          async: true,
+          marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+          style: { color: "blue", opacity: 0.5},
+        }).addTo(map);
+      })
+
+  for await (let name of ['Crescent_S', 'Lake_Shore_Limited_W', 'Lake_Shore_Limited_E', 'Crescent_N']) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.geojson`)
       .then(res => res.json())
       .then(res => {
