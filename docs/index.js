@@ -159,8 +159,8 @@ async function renderMap() {
   }
 
   for await (let name of ['Adirondack_N', 'Lake_Shore_Limited_E', 'Crescent_N', 'Northeast_Regional_N', 'TriRail']) {
-    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.gpx`)
-      .then(res => res.text())
+    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.geojson`)
+      .then(res => res.json())
       .then(res => {
         /*
         let time = res.match(/time = [0-9]*h [0-9]*m/)[0]
