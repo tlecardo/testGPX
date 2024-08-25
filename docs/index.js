@@ -146,8 +146,19 @@ async function renderMap() {
 
   legend.addTo(map);
 
-  let namesTracks = ['Lake_Shore_Limited_W', 'Empire_Builder', 'California_Zephyr', 'Southwest_Chief',
-    'Sunset_Limited', 'Adirondack_S', 'Crescent_S', 'Coast_Starlight']
+  for await (let name of ['Empire_Builder', 'Crescent_S']) {
+    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.geojson`)
+      .then(res => res.json())
+      .then(res => {
+        new L.GPX(res, {
+          async: true,
+          marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+          polyline_options: { color: "blue", opacity: 0.5, dashArray: "10 10" },
+        }).addTo(map);
+      })
+  }
+
+  let namesTracks = ['Lake_Shore_Limited_W', 'Sunset_Limited', 'Adirondack_S', 'Coast_Starlight']
 
   for await (let name of namesTracks) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.gpx`)
