@@ -146,7 +146,7 @@ async function renderMap() {
 
   legend.addTo(map);
 
-  for await (let name of ['Empire_Builder', 'Crescent_S', 'Lake_Shore_Limited_W', 'Sunset_Limited', 'Adirondack_S', 'Coast_Starlight']) {
+  for await (let name of ['Empire_Builder', 'Crescent_S', 'Lake_Shore_Limited_W', 'Sunset_Limited', 'Coast_Starlight']) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.geojson`)
       .then(res => res.json())
       .then(res => {
@@ -158,7 +158,7 @@ async function renderMap() {
       })
   }
 
-  for await (let name of ['Adirondack_N', 'Lake_Shore_Limited_E', 'Crescent_N', 'Northeast_Regional_N', 'TriRail']) {
+  for await (let name of ['Adirondack', 'Lake_Shore_Limited_E', 'Crescent_N', 'Northeast_Regional_N', 'TriRail']) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.geojson`)
       .then(res => res.json())
       .then(res => {
