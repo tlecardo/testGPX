@@ -140,8 +140,8 @@ async function renderMap() {
 
   legend.addTo(map);
 
-  for await (let country of ['US', 'UK']) {
-    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${country}.geojson`)
+  for (let country of ['US', 'UK']) {
+    fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${country}.geojson`)
       .then(res => res.json())
       .then(res => {
         new L.geoJSON(res, {
@@ -159,8 +159,8 @@ async function renderMap() {
       })
   }
 
-  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Ferry.geojson`)
-    .then(res => res.text())
+  fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Ferry.geojson`)
+    .then(res => res.json())
     .then(res => {
       new L.geoJSON(res, {
         onEachFeature: function (feature, layer) {
@@ -174,8 +174,8 @@ async function renderMap() {
       }).addTo(map);
     })
 
-  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Velo.geojson`)
-    .then(res => res.text())
+  fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Velo.geojson`)
+    .then(res => res.json())
     .then(res => {
       new L.geoJSON(res, {
         onEachFeature: function (feature, layer) {
