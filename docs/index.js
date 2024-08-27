@@ -140,7 +140,7 @@ async function renderMap() {
 
   legend.addTo(map);
 
-  for (let country of ['US', 'UK']) {
+  for (let country of ['US', 'UK', 'CA', 'ES']) {
     fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${country}.geojson`)
       .then(res => res.json())
       .then(res => {
@@ -189,7 +189,7 @@ async function renderMap() {
       }).addTo(map);
     })
 
-  let histTracks = ['BE', 'FR', 'CA', 'ES']
+  let histTracks = ['BE', 'FR']
   for await (let name of histTracks) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${name}.gpx`)
       .then(res => res.text())
