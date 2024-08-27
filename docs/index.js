@@ -123,7 +123,7 @@ async function renderMap() {
   //L.polyline([pointBCN, pointBVA], { color: 'black', weight: 5, opacity: 0.03 }).addTo(map);
 
 
-  // map.fitBounds(new L.LatLngBounds(new L.LatLng(32, -122.292293), new L.LatLng(45.500295, -73.567149)));
+  map.fitBounds(new L.LatLngBounds(new L.LatLng(32, -122.292293), new L.LatLng(45.500295, -73.567149)));
 
   var legend = L.control({ position: "bottomleft" });
 
@@ -228,7 +228,6 @@ async function renderMap() {
       }).addTo(map);
     })
 
-
   await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Voiture.gpx`)
     .then(res => res.text())
     .then(res => {
@@ -239,6 +238,7 @@ async function renderMap() {
         polyline_options: { color: "black", opacity: 0.3 },
       }).addTo(map);
     })
+
 }
 
 renderMap().catch(console.error)
