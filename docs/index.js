@@ -159,7 +159,7 @@ async function renderMap() {
       })
     }
 
-  for await (let name of ['Crescent_S', 'Lake_Shore_Limited_W', 'Lake_Shore_Limited_E', 'Crescent_N']) {
+  for await (let name of ['Crescent_S', 'Lake_Shore_Limited_W', 'Lake_Shore_Limited_E']) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.geojson`)
       .then(res => res.json())
       .then(res => {
