@@ -123,7 +123,7 @@ async function renderMap() {
   //L.polyline([pointBCN, pointBVA], { color: 'black', weight: 5, opacity: 0.03 }).addTo(map);
 
 
-  map.fitBounds(new L.LatLngBounds(new L.LatLng(32, -122.292293), new L.LatLng(45.500295, -73.567149)));
+  // map.fitBounds(new L.LatLngBounds(new L.LatLng(32, -122.292293), new L.LatLng(45.500295, -73.567149)));
 
   var legend = L.control({ position: "bottomleft" });
 
@@ -141,7 +141,7 @@ async function renderMap() {
   legend.addTo(map);
 
   for await (let country of ['US', 'UK']) {
-  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${country}.geojson`)
+    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${country}.geojson`)
       .then(res => res.json())
       .then(res => {
         new L.geoJSON(res, {
@@ -154,10 +154,40 @@ async function renderMap() {
           },
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-          style: { color: "blue", opacity: 0.5},
+          style: { color: "blue", opacity: 0.5 },
         }).addTo(map);
       })
-    }
+  }
+
+  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Ferry.geojson`)
+    .then(res => res.text())
+    .then(res => {
+      new L.geoJSON(res, {
+        onEachFeature: function (feature, layer) {
+          layer.bindTooltip(
+            `<center class="track title">${feature.properties.name}</center>`,
+            { sticky: true, });
+        },
+        async: true,
+        marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+        style: { color: "red", opacity: 0.5 },
+      }).addTo(map);
+    })
+
+  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Velo.geojson`)
+    .then(res => res.text())
+    .then(res => {
+      new L.geoJSON(res, {
+        onEachFeature: function (feature, layer) {
+          layer.bindTooltip(
+            `<center class="track title">${feature.properties.name}</center>`,
+            { sticky: true, });
+        },
+        async: true,
+        marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+        style: { color: "green", opacity: 0.4 },
+      }).addTo(map);
+    })
 
   let histTracks = ['BE', 'FR', 'CA', 'ES']
   for await (let name of histTracks) {
@@ -187,17 +217,6 @@ async function renderMap() {
       })
   }
 
-  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Ferry.gpx`)
-    .then(res => res.text())
-    .then(res => {
-      new L.GPX(res, {
-        async: true,
-        marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-        gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "red", opacity: 0.5 },
-      }).addTo(map);
-    })
-
   await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Bus.gpx`)
     .then(res => res.text())
     .then(res => {
@@ -218,17 +237,6 @@ async function renderMap() {
         marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
         gpx_options: { joinTrackSegments: false },
         polyline_options: { color: "black", opacity: 0.3 },
-      }).addTo(map);
-    })
-
-  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Velo.gpx`)
-    .then(res => res.text())
-    .then(res => {
-      new L.GPX(res, {
-        async: true,
-        marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-        gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "green", opacity: 0.4 },
       }).addTo(map);
     })
 }
