@@ -159,6 +159,7 @@ async function renderMap() {
       })
     }
 
+    /*
   for await (let name of ['Lake_Shore_Limited_W', 'Lake_Shore_Limited_E']) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/USTracks/${name}.geojson`)
       .then(res => res.json())
@@ -177,6 +178,7 @@ async function renderMap() {
         }).addTo(map);
       })
   }
+      */
 
   let histTracks = ['BE', 'FR', 'CA', 'ES']
   for await (let name of histTracks) {
