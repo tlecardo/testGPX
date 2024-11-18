@@ -140,8 +140,8 @@ async function renderMap() {
 
   legend.addTo(map);
 
-  for (let country of ['US', 'UK', 'CA', 'ES']) {
-    fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${country}.geojson`)
+  for (let country of ['US', 'UK', 'CA', 'ES', 'FR', 'BE']) {
+    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${country}.geojson`)
       .then(res => res.json())
       .then(res => {
         new L.geoJSON(res, {
@@ -159,7 +159,7 @@ async function renderMap() {
       })
   }
 
-  fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Ferry.geojson`)
+  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Ferry.geojson`)
     .then(res => res.json())
     .then(res => {
       new L.geoJSON(res, {
@@ -174,7 +174,7 @@ async function renderMap() {
       }).addTo(map);
     })
 
-  fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Velo.geojson`)
+  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Velo.geojson`)
     .then(res => res.json())
     .then(res => {
       new L.geoJSON(res, {
@@ -188,20 +188,6 @@ async function renderMap() {
         style: { color: "green", opacity: 0.4 },
       }).addTo(map);
     })
-
-  let histTracks = ['BE', 'FR']
-  for await (let name of histTracks) {
-    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${name}.gpx`)
-      .then(res => res.text())
-      .then(res => {
-        new L.GPX(res, {
-          async: true,
-          marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-          gpx_options: { joinTrackSegments: false },
-          polyline_options: { color: "blue", opacity: 0.5 },
-        }).addTo(map);
-      })
-  }
 
   let projTracks = ['Exo_1', 'Ottawa']
   for await (let name of projTracks) {
@@ -217,13 +203,17 @@ async function renderMap() {
       })
   }
 
-  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Bus.gpx`)
-    .then(res => res.text())
+  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Bus.geojson`)
+    .then(res => res.json())
     .then(res => {
-      new L.GPX(res, {
+      new L.geoJSON(res, {
+        onEachFeature: function (feature, layer) {
+          layer.bindTooltip(
+            `<center class="track title">${feature.properties.name}</center>`,
+            { sticky: true, });
+        },
         async: true,
         marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-        gpx_options: { joinTrackSegments: false },
         polyline_options: { color: "black", opacity: 0.3 },
       }).addTo(map);
     })
