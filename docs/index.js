@@ -191,16 +191,15 @@ async function renderMap() {
       }).addTo(map);
     })
 
-  let projTracks = ['Exo_1', 'Ottawa']
+  let projTracks = ['Vannes']
   for await (let name of projTracks) {
     await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Projected/${name}.gpx`)
-      .then(res => res.text())
+      .then(res => res.json())
       .then(res => {
-        new L.GPX(res, {
+        new L.geoJSON(res, {
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-          gpx_options: { joinTrackSegments: false },
-          polyline_options: { color: "blue", opacity: 0.5, dashArray: "10 10" },
+          style: { color: "blue", opacity: 0.5, dashArray: "10 10" },
         }).addTo(map);
       })
   }
