@@ -146,11 +146,13 @@ async function renderMap() {
       .then(res => {
         new L.geoJSON(res, {
           onEachFeature: function (feature, layer) {
-            layer.bindTooltip(
-              `<center class="track title">${feature.properties.name}</center>` +
-              `<center>${(feature.properties.distance / 1000).toFixed(2)} km</center>` +
-              `<center>${convertString(feature.properties.time / 1000)}</center>`,
-              { sticky: true, });
+            if (feature.properties.keys().includes("name")) {
+              layer.bindTooltip(
+                `<center class="track title">${feature.properties.name}</center>` +
+                ((feature.properties.keys().includes("distance")) ? `<center>${(feature.properties.distance / 1000).toFixed(2)} km</center>` : "") +
+                ((feature.properties.keys().includes("time")) ? `<center>${convertString(feature.properties.time / 1000)}</center>` : ""),
+                { sticky: true, });
+            }
           },
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
