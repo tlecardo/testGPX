@@ -208,11 +208,6 @@ async function renderMap() {
       .then(res => res.json())
       .then(res => {
         new L.geoJSON(res, {
-          onEachFeature: function (feature, layer) {
-            layer.bindTooltip(
-              `<center class="track title">${feature.properties.name}</center>`,
-              { sticky: true, });
-          },
           async: true,
           marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
           style: { color: "black", opacity: 0.3 },
