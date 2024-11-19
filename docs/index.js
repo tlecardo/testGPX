@@ -193,7 +193,7 @@ async function renderMap() {
 
   let projTracks = ['Vannes']
   for await (let name of projTracks) {
-    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Projected/${name}.gpx`)
+    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Projected/${name}.geojson`)
       .then(res => res.json())
       .then(res => {
         new L.geoJSON(res, {
