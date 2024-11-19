@@ -203,31 +203,22 @@ async function renderMap() {
       })
   }
 
-  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Bus.geojson`)
-    .then(res => res.json())
-    .then(res => {
-      new L.geoJSON(res, {
-        onEachFeature: function (feature, layer) {
-          layer.bindTooltip(
-            `<center class="track title">${feature.properties.name}</center>`,
-            { sticky: true, });
-        },
-        async: true,
-        marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-        polyline_options: { color: "black", opacity: 0.3 },
-      }).addTo(map);
-    })
-
-  await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/Voiture.gpx`)
-    .then(res => res.text())
-    .then(res => {
-      new L.GPX(res, {
-        async: true,
-        marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-        gpx_options: { joinTrackSegments: false },
-        polyline_options: { color: "black", opacity: 0.3 },
-      }).addTo(map);
-    })
+  for (let type of ['Bus', 'Voiture']) {
+    await fetch(`https://raw.githubusercontent.com/tlecardo/testGPX/main/files/${type}.geojson`)
+      .then(res => res.json())
+      .then(res => {
+        new L.geoJSON(res, {
+          onEachFeature: function (feature, layer) {
+            layer.bindTooltip(
+              `<center class="track title">${feature.properties.name}</center>`,
+              { sticky: true, });
+          },
+          async: true,
+          marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+          style: { color: "black", opacity: 0.3 },
+        }).addTo(map);
+      })
+  }
 
 }
 
