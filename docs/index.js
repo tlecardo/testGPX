@@ -149,8 +149,8 @@ async function renderMap() {
             try {
               layer.bindTooltip(
                 `<center class="track title">${feature.properties.name}</center>` +
-                ((feature.properties.keys().includes("distance")) ? `<center>${(feature.properties.distance / 1000).toFixed(2)} km</center>` : "") +
-                ((feature.properties.keys().includes("time")) ? `<center>${convertString(feature.properties.time / 1000)}</center>` : ""),
+                `<center>${(feature.properties.distance / 1000).toFixed(2)} km</center>` +
+                `<center>${convertString(feature.properties.time / 1000)}</center>`,
                 { sticky: true, });
             } catch {}
           },
